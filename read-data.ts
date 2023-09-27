@@ -5,7 +5,7 @@ import {
   LAMPORTS_PER_SOL,
 } from '@solana/web3.js';
 
-const connection = new Connection(clusterApiUrl('devnet'));
+const connection = new Connection('http://127.0.0.1:8899');
 const address = new PublicKey(
   'CenYq6bDRB7p73EjsPEpiYN7uveyPUTdXkDkgUduboaN'
 );
