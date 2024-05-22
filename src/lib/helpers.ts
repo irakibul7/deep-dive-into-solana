@@ -1,6 +1,7 @@
 import { Keypair } from '@solana/web3.js';
 import fs from 'fs';
 import path from 'path';
+import { URL } from 'url';
 
 // define default locations
 const DEFAULT_KEY_DIR_NAME = '.local_keys';
@@ -10,7 +11,7 @@ const DEFAULT_KEY_DIR_NAME = '.local_keys';
  * a valid Keypair
  */
 
-export function loadKeypairFromFile(absPath) {
+export function loadKeypairFromFile(absPath: string | Buffer | URL) {
   try {
     if (!absPath) throw new Error('No path provided');
     if (!fs.existsSync(absPath)) throw new Error('File not found');

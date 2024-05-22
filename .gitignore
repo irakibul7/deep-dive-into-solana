@@ -1,3 +1,10 @@
-/node_modules
+# Node modules
+node_modules/
+
+# Output directories
+dist/
+build/
+
+# Environment variables
 .env
 .local_keys
